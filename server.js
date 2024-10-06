@@ -13,9 +13,13 @@ connectDB();
 const app = express();
 
 // Middleware
+const allowedOrigins = ['http://localhost:3000', 'https://online-jobs-portal.netlify.app'];
+
 app.use(cors({
-    origin: 'http://localhost:3000'
+    origin: allowedOrigins
 }));
+
+
 app.use(express.json());
 
 // Routes
