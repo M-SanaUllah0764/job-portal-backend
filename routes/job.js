@@ -5,8 +5,8 @@ const router = express.Router();
 
 router.get('/', getJobs);
 router.post('/', auth, createJob);
-router.delete('/:id', auth, deleteJob);
 router.put('/:id', auth, updateJob);
+router.delete('/:id', auth, deleteJob);
 
 
 module.exports = router;
